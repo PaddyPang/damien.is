@@ -1,0 +1,19 @@
+# Laravel
+/vendor
+/node_modules
+.env
+
+/public/storage
+/public/build
+/public/js
+/public/css
+
+# Bower
+/public/bower_components
+
+# Idea
+/.idea
+
+# IDE-Helper
+_ide_helper.php
+.phpstorm.meta.php
