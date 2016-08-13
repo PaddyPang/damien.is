@@ -1,0 +1,20 @@
+{
+  "name": "damien.is",
+  "version": "0.0.1",
+  "homepage": "https://github.com/TheKoon/damien.is",
+  "authors": [
+    "Damien Criado <dev@damien.is>"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.2.4",
+    "bootstrap-sass": "3.3.7"
+  }
+}
