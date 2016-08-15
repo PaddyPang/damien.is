@@ -1,20 +1,15 @@
-# Laravel
 /vendor
 /node_modules
+/bower_components
 .env
 
 /public/storage
 /public/build
 /public/js
 /public/css
-
-# Public
-/public/bower_components
 /public/fonts
 
-# Idea
+# Dev
 /.idea
-
-# IDE-Helper
 _ide_helper.php
 .phpstorm.meta.php
