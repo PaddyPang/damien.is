@@ -1,0 +1,64 @@
+ _____   ______  __    __  __  ______  __   __
+/\  __-./\  __ \/\ "-./  \/\ \/\  ___\/\ "-.\ \
+\ \ \/\ \ \  __ \ \ \-./\ \ \ \ \  __\\ \ \-.  \
+ \ \____-\ \_\ \_\ \_\ \ \_\ \_\ \_____\ \_\\"\_\
+  \/____/ \/_/\/_/\/_/  \/_/ /_/\/_____/\/_/ \/_/
+
+The guy, technology & tools behind this site.
+
+
+Damien Criado
+-------------
+
+Made with love in Geneva.
+
+Damien Criado
+Content, design & development
+@Rocket_Rakoon
+
+
+TECHNOLOGY
+----------
+
+Laravel - Framework
+laravel.com
+
+Sass - CSS pre-processor
+sass-lang.com
+
+Gulp - Task automation
+gulpjs.com
+
+GitHub - Code collaboration & hosting
+github.com
+
+JavaScript libraries include:
+jQuery
+
+
+TOOLS
+-----
+
+PhpStorm - PHP IDE
+jetbrains.com
+
+Sublime Text - Text editor
+sublimetext.com
+
+Sketch - Graphics editor
+sketchapp.com
+
+Illustrator & Photoshop - Graphics editor
+adobe.com
+
+
+FONTS
+-----
+
+Input Mono
+by David Jonathan Ross
+input.fontbureau.com
+
+Tiempos Headline
+by Kris Sowersby
+klim.co.nz

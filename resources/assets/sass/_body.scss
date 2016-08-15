@@ -1,0 +1,11 @@
+body {
+    &.blue-pink {
+        background-color: #3A3C83;
+        color: #FF8181;
+
+        ::selection {
+            background-color: #FF8181;
+            color: #3A3C83;
+        }
+    }
+}
