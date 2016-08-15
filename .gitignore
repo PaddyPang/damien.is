@@ -8,8 +8,9 @@
 /public/js
 /public/css
 
-# Bower
+# Public
 /public/bower_components
+/public/fonts
 
 # Idea
 /.idea
