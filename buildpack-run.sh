@@ -1,4 +1,4 @@
-cd $BUILD_DIR
+#!/usr/bin/env bash
 
 bower install
 gulp --production

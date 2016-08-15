@@ -13,6 +13,9 @@ var bowerComponents = 'public/bower_components';
  */
 
 elixir(function(mix) {
+    mix.copy('bower_components', 'public/bower_components');
+    mix.copy('resources/assets/fonts', 'public/fonts');
+
     mix.sass('app.scss');
 
     mix.scripts('app.js', 'public/js/app.js');
@@ -20,10 +23,8 @@ elixir(function(mix) {
     mix.scripts([
         'jquery/dist/jquery.js',
         'bootstrap-sass/assets/javascripts/bootstrap.js',
-        '../../resources/assets/js/libraries/*.js',
+        '../../resources/assets/js/libraries/*.js'
     ], 'public/js/vendor.js', bowerComponents);
 
     mix.version(['css/app.css', 'js/app.js', 'js/vendor.js']);
-
-    mix.copy('resources/assets/fonts', 'public/fonts');
 });
