@@ -13,13 +13,7 @@ header.header {
 
     .navbar-brand {
         color: inherit;
-        @include transition(opacity 100ms);
         font-size: $font-size-base;
-
-        &:hover {
-            text-decoration: none;
-            opacity: .6;
-        }
     }
 
     .navbar-nav li a {
