@@ -8,7 +8,7 @@
 
 (function ($) {
 
-    $.fn.shuffleLetters = function (prop) {
+    $.fn.shuffleLettersDev = function (prop) {
 
         var options = $.extend({
             "step": 8,			// How many times should the letters be changed
@@ -54,15 +54,6 @@
                     types[i] = "space";
                     continue;
                 }
-                else if (/[a-z]/.test(ch)) {
-                    types[i] = "lowerLetter";
-                }
-                else if (/[A-Z]/.test(ch)) {
-                    types[i] = "upperLetter";
-                }
-                else {
-                    types[i] = "symbol";
-                }
 
                 letters.push(i);
             }
@@ -98,7 +89,7 @@
 
                     if (i < start + options.step) {
                         // Generate a random character at thsi position
-                        strCopy[letters[i]] = randomChar(types[letters[i]]);
+                        strCopy[letters[i]] = randomChar();
                     }
                     else {
                         strCopy[letters[i]] = "";
@@ -118,18 +109,8 @@
         });
     };
 
-    function randomChar(type) {
-        var pool = "";
-
-        if (type == "lowerLetter") {
-            pool = "abcdefghijklmnopqrstuvwxyz0123456789";
-        }
-        else if (type == "upperLetter") {
-            pool = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-        }
-        else if (type == "symbol") {
-            pool = ",.?/\\(^)![]{}*&^%$#'\"";
-        }
+    function randomChar() {
+        var pool = "█▓▒░█▓▒░█▓▒░█▓▒░█▓▒░█▓▒░<>/,.?/\\(^)![]{}*&^%$#'\"";
 
         var arr = pool.split('');
         return arr[Math.floor(Math.random() * arr.length)];
