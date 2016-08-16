@@ -1,3 +1,5 @@
-$('[data-shuffle]').shuffleLetters({
-    'step': 20
+$(function() {
+    $('[data-shuffle]').shuffleLettersDev({
+        'step': 20
+    });
 });
