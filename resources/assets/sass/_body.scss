@@ -1,11 +1,83 @@
 body {
     &.blue-pink {
-        background-color: #3A3C83;
-        color: #FF8181;
+        $primary: #FF8181;
+        $secondary: #3A3C83;
+        $alt: #6367FF;
+
+        background-color: $secondary;
+        color: $primary;
 
         ::selection {
-            background-color: #FF8181;
-            color: #3A3C83;
+            background-color: $primary;
+            color: $secondary;
+        }
+
+        .navbar-brand span {
+            color: $alt;
+        }
+
+        @media (max-width: $screen-xs-max) {
+            .navbar-collapse {
+                box-shadow: inset 0 1px 0 $alt;
+            }
+        }
+
+        .navbar-toggle, .navbar-toggle:focus {
+            border-color: $primary;
+            background-color: $secondary;
+
+            .icon-bar {
+                background-color: $primary;
+            }
+
+            &:hover {
+                background-color: $primary;
+
+                .icon-bar {
+                    background-color: $secondary;
+                }
+            }
+        }
+    }
+
+    &.blue-cyan {
+        $primary: #00B1AA;
+        $secondary: #E6EEFF;
+        $alt: #95d1de;
+
+        background-color: $secondary;
+        color: $primary;
+
+        ::selection {
+            background-color: $primary;
+            color: $secondary;
+        }
+
+        .navbar-brand span {
+            color: $alt;
+        }
+
+        @media (max-width: $screen-xs-max) {
+            .navbar-collapse {
+                box-shadow: inset 0 1px 0 $alt;
+            }
+        }
+
+        .navbar-toggle, .navbar-toggle:focus {
+            border-color: $primary;
+            background-color: $secondary;
+
+            .icon-bar {
+                background-color: $primary;
+            }
+
+            &:hover {
+                background-color: $primary;
+
+                .icon-bar {
+                    background-color: $secondary;
+                }
+            }
         }
     }
 }
