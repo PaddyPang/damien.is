@@ -30,7 +30,7 @@
             made by <a href="/humans.txt" target="_blank">human</a> / powered by <a href="https://laravel.com/" target="_blank">laravel</a>
         </div>
         <div class="opensource">
-            <a href="https://github.com/damiencriado/damien.is" target="_blank">get this website source</a>
+            <a href="https://github.com/damiencriado/damien.is" target="_blank">get the source</a>
         </div>
     </div>
 </footer>
