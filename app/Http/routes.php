@@ -13,4 +13,4 @@
 
 Route::resource('/', 'HomeController');
 
-Route::get('sitemap.xml', 'SitemapController@index');
+Route::get('sitemap', 'SitemapController@index');
