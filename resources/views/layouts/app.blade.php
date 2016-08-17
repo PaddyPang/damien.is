@@ -22,7 +22,7 @@
     <link rel="apple-touch-icon" href="{{ Bust::url('/images/apple-touch-icon.png') }}'"/>
     <link rel="shortcut icon" type="image/x-icon" href="{{ Bust::url('/images/favicon.ico') }}'"/>
     <!--[if IE]>
-    <script src="/bower_components/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="{{ Bust::url('/bower_components/html5shiv/dist/html5shiv.min.js') }}"></script>
     <![endif]-->
 
     @section('head')
