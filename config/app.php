@@ -156,6 +156,7 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
         Watson\Sitemap\SitemapServiceProvider::class,
+        Fideloper\Proxy\TrustedProxyServiceProvider::class,
 
 
         /*

@@ -2,7 +2,15 @@
 
 namespace Damien\Http;
 
+use Fideloper\Proxy\TrustProxies;
+use Illuminate\Auth\Middleware\AuthenticateWithBasicAuth;
+use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use Illuminate\Foundation\Http\Middleware\Authorize;
+use Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode;
+use Illuminate\Routing\Middleware\ThrottleRequests;
+use Illuminate\Session\Middleware\StartSession;
+use Illuminate\View\Middleware\ShareErrorsFromSession;
 
 class Kernel extends HttpKernel
 {
@@ -14,7 +22,8 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $middleware = [
-        \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
+        CheckForMaintenanceMode::class,
+        TrustProxies::class,
     ];
 
     /**
@@ -24,11 +33,11 @@ class Kernel extends HttpKernel
      */
     protected $middlewareGroups = [
         'web' => [
-            \Damien\Http\Middleware\EncryptCookies::class,
-            \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
-            \Illuminate\Session\Middleware\StartSession::class,
-            \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-            \Damien\Http\Middleware\VerifyCsrfToken::class,
+            Middleware\EncryptCookies::class,
+            AddQueuedCookiesToResponse::class,
+            StartSession::class,
+            ShareErrorsFromSession::class,
+            Middleware\VerifyCsrfToken::class,
         ],
 
         'api' => [
@@ -44,10 +53,10 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'auth'       => \Damien\Http\Middleware\Authenticate::class,
-        'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
-        'can'        => \Illuminate\Foundation\Http\Middleware\Authorize::class,
-        'guest'      => \Damien\Http\Middleware\RedirectIfAuthenticated::class,
-        'throttle'   => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'auth'       => Middleware\Authenticate::class,
+        'auth.basic' => AuthenticateWithBasicAuth::class,
+        'can'        => Authorize::class,
+        'guest'      => Middleware\RedirectIfAuthenticated::class,
+        'throttle'   => ThrottleRequests::class,
     ];
 }
