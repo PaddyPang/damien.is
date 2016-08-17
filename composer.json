@@ -15,7 +15,8 @@
     "doctrine/dbal": "^2.5",
     "jenssegers/optimus": "^0.2.0",
     "predis/predis": "^1.0",
-    "guzzlehttp/guzzle": "~5.3|~6.0"
+    "guzzlehttp/guzzle": "~5.3|~6.0",
+    "watson/sitemap": "2.0.*"
   },
   "require-dev": {
     "fzaninotto/faker": "~1.4",

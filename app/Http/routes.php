@@ -12,3 +12,5 @@
 */
 
 Route::resource('/', 'HomeController');
+
+Route::resource('sitemap', 'SitemapController');

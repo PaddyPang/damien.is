@@ -155,6 +155,7 @@ return [
          */
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        Watson\Sitemap\SitemapServiceProvider::class,
 
 
         /*
@@ -212,6 +213,7 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
         'Debugbar'  => Barryvdh\Debugbar\Facade::class,
         'Bust'      => Damien\Libraries\CacheBuster::class,
+        'Sitemap'   => Watson\Sitemap\Facades\Sitemap::class,
 
     ],
 
