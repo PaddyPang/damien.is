@@ -22,7 +22,7 @@
             </div>
             <div class="col-xs-12 col-sm-3">
                 <ul class="list-unstyled">
-                    <li><a href="http://www.yka.ch/" target="_blank">Lead Developer at<br>YKA SAS</a></li>
+                    <li><a href="http://www.yka.ch/" target="_blank">Lead Developer at YKA&nbsp;SAS</a></li>
                 </ul>
             </div>
         </div><!-- .row -->
