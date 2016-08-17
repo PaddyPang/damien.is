@@ -1,90 +1,58 @@
-body {
-    &.blue-pink {
-        $primary: #FF8181;
-        $secondary: #3A3C83;
-        $alt: #6367FF;
+$colors: "#FF8181 #3A3C83 #6367FF",
+"#00B1AA #E6EEFF #95D1DE",
+"#E6EEFF #6B53CB #432D9B",
+"#42449D #FCF8EC #E1C77A",
+"#000 #FFF #CCC";
+@for $i from 1 through length($colors) {
+    $list: str-explode(nth($colors, $i), ' ');
 
-        background-color: $secondary;
-        color: $primary;
+    $color-1  : unquote(nth($list, 1));
+    $color-2  : unquote(nth($list, 2));
+    $color-3  : unquote(nth($list, 3));
+
+    body.alt-#{$i} {
+        background-color: $color-2;
+        color: $color-1;
 
         ::selection {
-            background-color: $primary;
-            color: $secondary;
+            background-color: $color-1;
+            color: $color-2;
         }
 
         .navbar-brand span.alt {
-            color: $alt;
+            color: $color-3;
         }
 
         footer.footer hr {
-            border-color: $alt;
+            border-color: $color-3;
         }
 
         @media (max-width: $screen-xs-max) {
             .navbar-collapse {
-                box-shadow: inset 0 1px 0 $alt;
+                box-shadow: inset 0 1px 0 $color-3;
             }
         }
 
         .navbar-toggle, .navbar-toggle:focus {
-            border-color: $primary;
-            background-color: $secondary;
+            border-color: $color-1;
+            background-color: $color-2;
 
             .icon-bar {
-                background-color: $primary;
+                background-color: $color-1;
             }
 
             &:hover {
-                background-color: $primary;
+                background-color: $color-1;
 
                 .icon-bar {
-                    background-color: $secondary;
+                    background-color: $color-2;
                 }
             }
         }
     }
+}
 
-    &.blue-cyan {
-        $primary: #00B1AA;
-        $secondary: #E6EEFF;
-        $alt: #95d1de;
-
-        background-color: $secondary;
-        color: $primary;
-
-        ::selection {
-            background-color: $primary;
-            color: $secondary;
-        }
-
-        .navbar-brand span.alt {
-            color: $alt;
-        }
-
-        @media (max-width: $screen-xs-max) {
-            .navbar-collapse {
-                box-shadow: inset 0 1px 0 $alt;
-            }
-        }
-
-        .navbar-toggle, .navbar-toggle:focus {
-            border-color: $primary;
-            background-color: $secondary;
-
-            .icon-bar {
-                background-color: $primary;
-            }
-
-            &:hover {
-                background-color: $primary;
-
-                .icon-bar {
-                    background-color: $secondary;
-                }
-            }
-        }
-    }
-
+body {
     a, a:hover, a:focus {
         color: inherit;
     }

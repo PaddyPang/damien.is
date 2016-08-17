@@ -56,9 +56,11 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 @import "../fonts/TiemposHeadlineWeb/fonts";
 
 /*==========  App  ==========*/
+@import "bower_components/SassyStrings/dist/SassyStrings";
 @import "reset";
-@import "body";
 @import "colors";
 @import "header";
 @import "footer";
-@import "container";
+@import "main";
+@import "typography";
+@import "links";

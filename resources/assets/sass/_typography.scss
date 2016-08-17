@@ -1,0 +1,9 @@
+@media (min-width: $screen-sm-min) {
+    body {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: floor(($font-size-base * 4));
+    }
+}
