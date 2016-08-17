@@ -157,6 +157,7 @@ return [
         Barryvdh\Debugbar\ServiceProvider::class,
         Watson\Sitemap\SitemapServiceProvider::class,
         Fideloper\Proxy\TrustedProxyServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
 
 
         /*
@@ -215,6 +216,7 @@ return [
         'Debugbar'  => Barryvdh\Debugbar\Facade::class,
         'Bust'      => Damien\Libraries\CacheBuster::class,
         'Sitemap'   => Watson\Sitemap\Facades\Sitemap::class,
+        'Socialite'     => Laravel\Socialite\Facades\Socialite::class,
 
     ],
 

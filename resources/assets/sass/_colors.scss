@@ -2,7 +2,8 @@ $colors: "#FF8181 #3A3C83 #6367FF",
 "#00B1AA #E6EEFF #95D1DE",
 "#E6EEFF #6B53CB #432D9B",
 "#42449D #FCF8EC #E1C77A",
-"#000 #FFF #CCC";
+"#000 #FFF #CCC",
+"#00FF00 #191919 #5a9c5a";
 @for $i from 1 through length($colors) {
     $list: str-explode(nth($colors, $i), ' ');
 

@@ -2,25 +2,19 @@
 
 namespace Damien\Http\Controllers\Auth;
 
+use Auth;
 use Damien\Http\Controllers\Controller;
-use Damien\User;
+use Damien\Models\User;
+use Exception;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
+use Redirect;
+use Response;
+use Socialite;
 use Validator;
 
 class AuthController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Registration & Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles the registration of new users, as well as the
-    | authentication of existing users. By default, this controller uses
-    | a simple trait to add these behaviors. Why don't you explore it?
-    |
-    */
-
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
     /**
@@ -28,12 +22,12 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = 'blog';
+    protected $redirectAfterLogout = 'sudo';
+    protected $allowedProvider = ['github', 'google'];
 
     /**
      * Create a new authentication controller instance.
-     *
-     * @return void
      */
     public function __construct()
     {
@@ -70,5 +64,64 @@ class AuthController extends Controller
             'email'    => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+    /**
+     * Redirect the user to the GitHub authentication page.
+     *
+     * @param $provider
+     *
+     * @return Response
+     */
+    public function redirectToProvider($provider)
+    {
+        if (! in_array($provider, $this->allowedProvider, true)) {
+            abort(404);
+        }
+
+        return Socialite::driver($provider)->redirect();
+    }
+
+    /**
+     * Obtain the user information from GitHub.
+     *
+     * @param $provider
+     *
+     * @return Response
+     */
+    public function handleProviderCallback($provider)
+    {
+        if (! in_array($provider, $this->allowedProvider, true)) {
+            abort(404);
+        }
+
+        try {
+            $socialite = Socialite::driver($provider)->user();
+        } catch (Exception $e) {
+            return Redirect::route('auth.oauth', $provider);
+        }
+
+        $user = User::where($provider, $socialite->id)->first();
+        if (! $user) {
+            if (! env('ALLOW_SIGNUP')) {
+                abort(404);
+            }
+
+            $user = User::where('email', $socialite->email)->first();
+
+            if (! $user) {
+                $user = new User();
+                $user->name = $socialite->nickname ?: $socialite->name;
+                $user->email = $socialite->email;
+                $user->avatar = $socialite->avatar;
+            }
+
+            $user->$provider = $socialite->id;
+            $user->save();
+        }
+
+        Auth::login($user);
+
+        return Redirect::intended($this->redirectTo);
     }
 }

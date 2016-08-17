@@ -1,6 +1,6 @@
 <?php
 
-namespace Damien;
+namespace Damien\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 

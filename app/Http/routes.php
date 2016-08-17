@@ -13,4 +13,26 @@
 
 Route::resource('/', 'HomeController');
 
+/*
+ * Auth
+ */
+Route::group(['as' => 'auth.', 'namespace' => 'Auth'], function () {
+    Route::get('sudo', [
+        'uses' => 'AuthController@showLoginForm',
+        'as'   => 'sudo',
+    ]);
+    Route::get('sudo/{provider}', [
+        'uses' => 'AuthController@redirectToProvider',
+        'as'   => 'oauth',
+    ]);
+    Route::get('sudo/{provider}/callback', [
+        'uses' => 'AuthController@handleProviderCallback',
+        'as'   => 'oauth.callback',
+    ]);
+    Route::get('exit', [
+        'uses' => 'AuthController@logout',
+        'as'   => 'logout',
+    ]);
+});
+
 Route::get('sitemap', 'SitemapController@index');
