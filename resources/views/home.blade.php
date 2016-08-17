@@ -2,6 +2,8 @@
 
 @section('body-class', 'alt-1')
 
+@section('is', '/coding')
+
 @section('body')
     @include('layouts.header')
 

@@ -2,6 +2,8 @@
 
 @section('body-class', 'alt-5')
 
+@section('is', '/searching')
+
 @section('body')
     @include('layouts.header')
 

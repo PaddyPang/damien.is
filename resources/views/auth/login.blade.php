@@ -2,6 +2,8 @@
 
 @section('body-class', 'alt-6')
 
+@section('is', '/sudo')
+
 @section('body')
     @include('layouts.header')
 
