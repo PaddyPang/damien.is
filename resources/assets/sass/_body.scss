@@ -11,4 +11,26 @@ body {
             text-decoration: none;
         }
     }
+
+    @media (min-width: $screen-sm-min) {
+        font-size: 18px;
+        h1 {
+            font-size: floor(($font-size-base * 4));
+        }
+    }
+
+    h1.title {
+        max-width: 16em;
+    }
+
+    main {
+        margin-bottom: 40px;
+    }
+
+    .damien {
+        margin-top: 20px;
+        max-width: 200px;
+        width: 100%;
+        border-radius: 100%;
+    }
 }

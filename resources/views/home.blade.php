@@ -8,7 +8,7 @@
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#">
-                        <tag data-shuffle>damien.is</tag><span data-shuffle>/coding</span>
+                        <span data-shuffle>damien.is</span><span class="alt" data-shuffle>/coding</span>
                     </a>
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
@@ -28,6 +28,19 @@
             </div><!-- /.container-fluid -->
         </nav>
     </header>
+
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-9">
+                    <h1>Building app, experimenting with new web technologies.</h1>
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <img class="damien" src="/images/damien.jpg">
+                </div>
+            </div>
+        </div>
+    </main>
 
     <footer class="footer">
         <div class="container-fluid">
@@ -56,7 +69,9 @@
                         <li><a href="http://www.yka.ch/" target="_blank">Lead Developer at<br>YKA SAS</a></li>
                     </ul>
                 </div>
-            </div>
+            </div><!-- .row -->
+            <div class="humans">made by <a href="/humans.txt" target="_blank">human</a> / powered by
+                <a href="https://laravel.com/" target="_blank">laravel</a></div>
         </div>
     </footer>
 @endsection
