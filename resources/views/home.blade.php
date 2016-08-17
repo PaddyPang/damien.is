@@ -12,7 +12,7 @@
                     <h1>Building app, experimenting with new web technologies.</h1>
                 </div>
                 <div class="col-xs-12 col-sm-3">
-                    <img class="damien" src="/images/damien.jpg">
+                    <img class="damien" src="{{ Bust::url('/images/damien.jpg') }}">
                 </div>
             </div>
         </div>
