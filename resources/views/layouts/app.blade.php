@@ -33,6 +33,10 @@
 </head>
 
 <body id="@yield('body-id')" class="@yield('body-class')">
+@if(app()->environment() === 'production')
+    @include('partials.analytics')
+@endif
+
 @yield('body')
 
 <!-- Scripts -->
