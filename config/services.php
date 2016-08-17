@@ -42,13 +42,13 @@ return [
     'github' => [
         'client_id' => env('GITHUB_ID'),
         'client_secret' => env('GITHUB_SECRET'),
-        'redirect' => url('sudo/github/callback'),
+        'redirect' => env('GITHUB_REDIRECT'),
     ],
 
     'google' => [
         'client_id' => env('GOOGLE_ID'),
         'client_secret' => env('GOOGLE_SECRET'),
-        'redirect' => url('sudo/google/callback'),
+        'redirect' => env('GOOGLE_REDIRECT'),
     ],
 
 ];
