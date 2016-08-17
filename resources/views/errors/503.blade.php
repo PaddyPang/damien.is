@@ -1,47 +1,19 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Be right back.</title>
+@extends('layouts.app')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('body-class', 'alt-5')
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+@section('body')
+    @include('layouts.header-without-menu')
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                color: #B0BEC5;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato', sans-serif;
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 72px;
-                margin-bottom: 40px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Be right back.</div>
+    <main class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-9">
+                    <h1>Be right back.</h1>
+                </div>
             </div>
         </div>
-    </body>
-</html>
+    </main>
+
+    @include('layouts.footer')
+@endsection
