@@ -19,7 +19,7 @@ Route::resource('/', 'HomeController');
 Route::group(['as' => 'auth.', 'namespace' => 'Auth'], function () {
     Route::get('sudo', [
         'uses' => 'AuthController@showLoginForm',
-        'as'   => 'sudo',
+        'as'   => 'login',
     ]);
     Route::get('sudo/{provider}', [
         'uses' => 'AuthController@redirectToProvider',
