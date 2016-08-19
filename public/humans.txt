@@ -7,14 +7,14 @@
 The guy, technology & tools behind this site.
 
 
-Damien Criado
+DAMIEN CRIADO
 -------------
 
 Made with love in Geneva.
 
 Damien Criado
 Content, design & development
-@Rocket_Rakoon
+@damiencriado
 
 
 TECHNOLOGY
@@ -48,7 +48,7 @@ sublimetext.com
 Sketch - Graphics editor
 sketchapp.com
 
-Illustrator & Photoshop - Graphics editor
+Photoshop - Graphics editor
 adobe.com
 
 
