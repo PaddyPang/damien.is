@@ -5,7 +5,7 @@
             <div class="col-xs-12 col-sm-3">
                 <ul class="list-unstyled">
                     <li>Damien Criado</li>
-                    <li><a href="mailto:hello@damien.is">hello@damien.is</a></li>
+                    <li><a href="mailto:hello@damien.is">Get in touch</a></li>
                 </ul>
             </div>
             <div class="col-xs-12 col-sm-3">
@@ -27,7 +27,7 @@
             </div>
         </div><!-- .row -->
         <div class="humans">
-            made by <a href="/humans.txt" target="_blank">human</a> / powered by <a href="https://laravel.com/" target="_blank">laravel</a>
+            made by <a href="/humans.txt" target="_blank">humans</a> / powered by <a href="https://laravel.com/" target="_blank">laravel</a>
         </div>
         <div class="opensource">
             <a href="https://github.com/damiencriado/damien.is" target="_blank">get the source</a>
