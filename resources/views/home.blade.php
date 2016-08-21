@@ -2,6 +2,8 @@
 
 @section('body-class', 'alt-1')
 
+@section('description', 'Building apps, experimenting with new web technologies.')
+
 @section('is', '/coding')
 
 @section('body')
