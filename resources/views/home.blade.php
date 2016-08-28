@@ -2,7 +2,7 @@
 
 @section('body-class', 'alt-1')
 
-@section('description', 'Building apps, experimenting with new web technologies.')
+@section('description', 'Damien Criado is an apps builder, experimenting with new web technologies.')
 
 @section('is', '/coding')
 
