@@ -1,13 +1,15 @@
 <?php
 
-namespace Damien\Http;
+namespace App\Http;
 
 use Fideloper\Proxy\TrustProxies;
+use Illuminate\Auth\Middleware\Authenticate;
 use Illuminate\Auth\Middleware\AuthenticateWithBasicAuth;
+use Illuminate\Auth\Middleware\Authorize;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
-use Illuminate\Foundation\Http\Middleware\Authorize;
 use Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode;
+use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Routing\Middleware\ThrottleRequests;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
@@ -22,9 +24,9 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $middleware = [
-        CheckForMaintenanceMode::class,
-        TrustProxies::class,
         Middleware\CheckForMaintenanceMode::class,
+        TrustProxies::class,
+        CheckForMaintenanceMode::class,
     ];
 
     /**
@@ -39,10 +41,12 @@ class Kernel extends HttpKernel
             StartSession::class,
             ShareErrorsFromSession::class,
             Middleware\VerifyCsrfToken::class,
+            SubstituteBindings::class,
         ],
 
         'api' => [
             'throttle:60,1',
+            'bindings',
         ],
     ];
 
@@ -54,8 +58,9 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'auth'       => Middleware\Authenticate::class,
+        'auth'       => Authenticate::class,
         'auth.basic' => AuthenticateWithBasicAuth::class,
+        'bindings'   => SubstituteBindings::class,
         'can'        => Authorize::class,
         'guest'      => Middleware\RedirectIfAuthenticated::class,
         'throttle'   => ThrottleRequests::class,

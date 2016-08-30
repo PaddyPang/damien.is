@@ -1,6 +1,6 @@
 <?php
 
-namespace Damien\Libraries;
+namespace App\Libraries;
 
 class CacheBuster
 {

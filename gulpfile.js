@@ -1,4 +1,6 @@
-var elixir = require('laravel-elixir');
+const elixir = require('laravel-elixir');
+
+require('laravel-elixir-vue');
 var bowerComponents = 'public/bower_components';
 
 /*
@@ -12,17 +14,15 @@ var bowerComponents = 'public/bower_components';
  |
  */
 
-elixir(function(mix) {
+elixir(mix => {
     mix.copy('bower_components', 'public/bower_components');
     mix.copy('resources/assets/fonts', 'public/fonts');
 
     mix.sass('app.scss');
 
-    mix.scripts('app.js', 'public/js/app.js');
+    mix.webpack('app.js');
 
     mix.scripts([
-        'jquery/dist/jquery.js',
-        'bootstrap-sass/assets/javascripts/bootstrap.js',
         '../../resources/assets/js/libraries/*.js'
     ], 'public/js/vendor.js', bowerComponents);
 

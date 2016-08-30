@@ -1,9 +1,9 @@
 <?php
 
-namespace Damien\Providers;
+namespace App\Providers;
 
-use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Event;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -13,21 +13,19 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'Damien\Events\SomeEvent' => [
-            'Damien\Listeners\EventListener',
+        'App\Events\SomeEvent' => [
+            'App\Listeners\EventListener',
         ],
     ];
 
     /**
-     * Register any other events for your application.
-     *
-     * @param  \Illuminate\Contracts\Events\Dispatcher $events
+     * Register any events for your application.
      *
      * @return void
      */
-    public function boot(DispatcherContract $events)
+    public function boot()
     {
-        parent::boot($events);
+        parent::boot();
 
         //
     }

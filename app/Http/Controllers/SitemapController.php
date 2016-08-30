@@ -1,6 +1,6 @@
 <?php
 
-namespace Damien\Http\Controllers;
+namespace App\Http\Controllers;
 
 use Carbon\Carbon;
 use Sitemap;

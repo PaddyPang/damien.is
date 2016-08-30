@@ -14,11 +14,10 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "2.2.4",
-    "bootstrap-sass": "3.3.7",
-    "font-awesome": "fontawesome#~4.6.0",
-    "octicons": "3.5.0",
-    "html5shiv": "~3.7.3",
+    "bootstrap-sass": "^3.3.7",
+    "font-awesome": "^4.6.3",
+    "html5shiv": "^3.7.3",
+    "octicons": "^4.3.0",
     "SassyStrings": "sassy-strings#^1.1.4"
   }
 }
